@@ -38,26 +38,31 @@ List of the test cases.
 
 - Login feature 
   - Verify already registered user can successfully login in the system  
-  - Verify already registered user can NOT successfully login in the system  with WRONG PASSWORD 
-  - Verify already registered user can NOT successfully login in the system  with WRONG USERNAME 
-  - Verify already registered user can NOT successfully login in the system  with NO CREDENTIALS
+  - Verify already registered user can NOT successfully login in the system  with WRONG USERNAME and WRONG PASSWORD 
 
 
-- Post feature
-    - Verify  user can create a new post and delete the new post
+- Profile page feature
+    - Verify  user can edit public info
+
+- Home page feature
+  - Verify  user can follow and unfollow other profile
 
 ## Installation
 
 - Clone the repository
-git clone myGitHub repo links lives here
-- Make sure you have JAVA version 21and up
+  git clone myGitHub https://github.com/DanielaDikova/Final-Project
+- Make sure you have openJDK version 21and up
 - Make sure you have Maven version 3.0.7 and up
 
 ## Usage
+After cloning the repository run with IDE of your liking
+And in src/test/java you can find the added test cases that can be run
+mvn clean test
+open IntelliJ maven tab clean test
 
 INSTALLATION:
 
-Please visit the Test Automation Framework with linK:
+Please visit the Test Automation Framework with linK:https://github.com/DanielaDikova/Final-Project
 
 Make sure that you can clone the repository. Follow the 3 different ways to do so:
  
@@ -81,7 +86,7 @@ This is a steps that needs to be done for Windows OS users:
 Go to SRC TEST RESOURCES folder and verify if the following folders are presented:
 - There is a folder with name "reports"
 - There is a folder with name "screenshots"
-- There is a folder with name "upload"
+- There is a folder with name "download"
 
 IF NOT
 When you build the project in src/test/java/gui you can find the folders created by the automation script.
@@ -103,10 +108,10 @@ Wait a bit the automation to start and after the test execution a report will be
 
 
 ## Bug report
-If you find any bugs that you want to report, please do so with the bug report and liveCicle explained 
+There are not bugs found
 
 ## Contact
 
-- [Skulo Student](mailto:skiloSutdent@abv.bg)
-- Project Link: [TAF Selenium 4 TestNG 7 ](https://github.com/)
+- [Skilo Student](Даниела Дикова)
+- Project Link: [TAF Selenium 4 TestNG 7 ](https://github.com/DanielaDikova/Final-Project)
 
