@@ -86,7 +86,7 @@ This is a steps that needs to be done for Windows OS users:
 Go to SRC TEST RESOURCES folder and verify if the following folders are presented:
 - There is a folder with name "reports"
 - There is a folder with name "screenshots"
-- There is a folder with name "download"
+
 
 IF NOT
 When you build the project in src/test/java/gui you can find the folders created by the automation script.
