@@ -34,6 +34,7 @@ List of the test cases.
 - Registration feature
   - Verify user cn registered in the system with valid data
   - Verify user cannot register in the system with invalid data
+  - Verify the 'sign up' button text is correct
 
 
 - Login feature 
