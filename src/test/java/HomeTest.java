@@ -5,23 +5,24 @@ import skillo.pom.LoginPage;
 import skillo.pom.ProfilePage;
 
 public class HomeTest extends TestObject {
+
     @Test
     public void followOrUnfollowUsers() {
-
         HomePage homePage = new HomePage(super.getWebDriver());
-
         System.out.println("Step 1: The user opens the Skillo homepage");
         homePage.openHomePage();
 
         System.out.println("Step 2: The user opens the login page by clicking on login page navigation  button");
         homePage.clickOnNavigationBarLoginButton();
+
         System.out.println("Step 3: The user is logging in");
         LoginPage loginPage = new LoginPage(super.getWebDriver());
 
         Assert.assertTrue(loginPage.isLoginPageURlLoaded());
-        loginPage.enterLoginCredentials();
 
+        loginPage.enterLoginCredentials();
         System.out.println("Step 4: The user is opening the home page");
+
         Assert.assertTrue(homePage.isHomePageURlLoaded());
 
         homePage.clickOnFollowOrUnfollowButton();
@@ -29,7 +30,6 @@ public class HomeTest extends TestObject {
 
         homePage.clickOnProfileNavigationButton();
         System.out.println("Step 6: The user has opens to profile page");
-
         ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         profilePage.isProfilePageURlLoaded();
 
@@ -38,6 +38,7 @@ public class HomeTest extends TestObject {
 
         Assert.assertTrue(homePage.isFollowingTheUser());
 
+        System.out.println("Step 8: The user is unfollowing another user");
         profilePage.clickOnFollowingUnfollowingButtonProfilePage();
 
         Assert.assertTrue(profilePage.isFollowingSectionTextVisible());

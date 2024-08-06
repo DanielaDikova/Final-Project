@@ -7,7 +7,6 @@ import skillo.pom.RegistrationPage;
 public class RegistrationTest extends TestObject {
     @Test
     public void registerWithValidCredentials() {
-
         System.out.println("Step 1: The user is opening the home page");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
@@ -32,7 +31,6 @@ public class RegistrationTest extends TestObject {
 
     @Test
     public void registerWithInvalidCredentials() {
-
         System.out.println("Step 1: The user is opening the home page");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
@@ -58,7 +56,6 @@ public class RegistrationTest extends TestObject {
 
     @Test
     public void signInButtonTextCheck() {
-
         System.out.println("Step 1: The user is opening the home page");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
@@ -79,7 +76,5 @@ public class RegistrationTest extends TestObject {
         System.out.println("Step 4: User is validating sign up button text");
 
         Assert.assertTrue(registrationPage.isSignInButtonTextCorrect());
-
-
     }
 }

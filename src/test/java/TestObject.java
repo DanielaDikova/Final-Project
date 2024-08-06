@@ -21,15 +21,15 @@ public class TestObject {
 
     public static final String TEST_RESOURCES_DIR = "src\\test\\resources\\";
     public static final String DOWNLOAD_DIR = TEST_RESOURCES_DIR.concat("download\\");
-
     public static final String SCREENSHOTS_DIR = TEST_RESOURCES_DIR.concat("screenshots\\");
     public static final String REPORTS_DIR = TEST_RESOURCES_DIR.concat("reports\\");
     public static final String UPLOAD_DIR = TEST_RESOURCES_DIR.concat("uploads\\");
     private WebDriver webDriver;
 
     @BeforeSuite
-    protected final void setupTestSuite() {
+    protected final void setupTestSuite() throws IOException {
         WebDriverManager.chromedriver().setup();
+        cleanDirectory(SCREENSHOTS_DIR);
     }
 
     @BeforeMethod
@@ -79,22 +79,17 @@ public class TestObject {
     private ChromeOptions configChromeOptions() {
         //Create path and setting for download folder
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory",
-                System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
-
+        prefs.put("download.default_directory", System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
         ChromeOptions chromeOptions = new ChromeOptions();
         //Set new default download folder
         chromeOptions.setExperimentalOption("prefs", prefs);
         //Force the download to be automatic
         chromeOptions.addArguments("disable-popup-blocking");
-
         return chromeOptions;
     }
 
     private void cleanDirectory(String directoryPath) throws IOException {
         File directory = new File(directoryPath);
-
-        //If directory is not shown after git clone of the repo this code will build the path
         if (!directory.exists()) {
             FileUtils.forceMkdir(directory);
         }

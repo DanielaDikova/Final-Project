@@ -6,10 +6,8 @@ import skillo.pom.ProfilePage;
 
 public class ProfileTest extends TestObject {
 
-
     @Test
     public void editUserProfile() throws InterruptedException {
-
         System.out.println("Step 1: The user is opening the home page");
         HomePage homePage = new HomePage(super.getWebDriver());
         homePage.openHomePage();
@@ -28,7 +26,6 @@ public class ProfileTest extends TestObject {
         System.out.println("Step 4: The user is been navigated to the home page");
 
         homePage.clickOnProfileNavigationButton();
-
         System.out.println("Step 5: The user is opening the profile page");
         ProfilePage profilePage = new ProfilePage(super.getWebDriver());
         profilePage.waitPageTobeFullLoaded();
@@ -40,10 +37,8 @@ public class ProfileTest extends TestObject {
         profilePage.enterEditUserCredentials();
         System.out.println("Step 7: The user has entered new public info");
 
-
         Assert.assertTrue(profilePage.isProfilePageURlLoaded());
 
         Assert.assertTrue(profilePage.isPublicInfoChanged());
-
     }
 }

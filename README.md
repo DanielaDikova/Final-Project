@@ -32,7 +32,7 @@ Many QA engineers are connected via the fast variety of  test automation activit
 ## Test activities performed with Selenium 4+ and TestNG Java unit framework:
 List of the test cases.
 - Registration feature
-  - Verify user cn registered in the system with valid data
+  - Verify user can registered in the system with valid data
   - Verify user cannot register in the system with invalid data
   - Verify the 'sign up' button text is correct
 
@@ -109,7 +109,8 @@ Wait a bit the automation to start and after the test execution a report will be
 
 
 ## Bug report
-There are not bugs found
+1. In registration test - "signInButtonTextCheck" the text of the register submit button is not correct. It has to be "Sign up" like the title, but actually is "Sign in".
+2. In registration test - "registerWithInvalidCredentials" in some case the user can register with invalid credentials.
 
 ## Contact
 
