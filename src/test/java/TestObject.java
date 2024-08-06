@@ -28,8 +28,9 @@ public class TestObject {
     private WebDriver webDriver;
 
     @BeforeSuite
-    protected final void setupTestSuite() {
+    protected final void setupTestSuite() throws IOException {
         WebDriverManager.chromedriver().setup();
+        cleanDirectory(SCREENSHOTS_DIR);
     }
 
     @BeforeMethod
@@ -79,8 +80,7 @@ public class TestObject {
     private ChromeOptions configChromeOptions() {
         //Create path and setting for download folder
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory",
-                System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
+        prefs.put("download.default_directory", System.getProperty("user.dir").concat("\\").concat(DOWNLOAD_DIR));
 
         ChromeOptions chromeOptions = new ChromeOptions();
         //Set new default download folder
