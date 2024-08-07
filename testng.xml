@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/User/Desktop/FinalProject-Git"><classes/></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/User/Desktop/FinalProject-Git">
+        <classes>
+        <class name="HomeTest">
+        <methods>
+            <include name="followOrUnfollowUsers"/>
+        </methods>
+    </class>
+        <class name="LoginTest">
+        <methods>
+            <include name="loginWithValidCredentials"/>
+            <include name="loginWithInvalidCredentials"/>
+        </methods>
+        </class>
+        <class name="ProfileTest">
+        <methods>
+            <include name="editUserProfile"/>
+        </methods>
+        </class>
+        <class name="RegistrationTest">
+            <methods>
+                <include name="registerWithValidCredentials"/>
+                <include name="registerWithInvalidCredentials"/>
+                <include name="signInButtonTextCheck"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>
